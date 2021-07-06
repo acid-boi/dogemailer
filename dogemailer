@@ -23,6 +23,7 @@ a = '''
 '''
 
 print(a)
+print("Namamskamr Bimdhayamk Ji")
 print("Welcome to Doge mail service")
 
 import smtplib
