@@ -1,0 +1,44 @@
+#!/bin/python3
+import sys
+
+
+
+a = '''
+
+
+
+       ▄      ▄    
+      ▐▒▀▄▄▄▄▀▒▌   
+    ▄▀▒▒▒▒▒▒▒▒▓▀▄  
+  ▄▀░█░░░░█░░▒▒▒▐  
+  ▌░░░░░░░░░░░▒▒▐  
+ ▐▒░██▒▒░░░░░░░▒▐  
+ ▐▒░▓▓▒▒▒░░░░░░▄▀  
+  ▀▄░▀▀▀▀░░░░▄▀    
+    ▀▀▄▄▄▄▄▀▀       
+
+
+
+
+'''
+
+print(a)
+print("Welcome to Doge mail service")
+
+import smtplib
+usermail=input("Please enter the destination email address: ")
+subject = input("Please enter the subject: ")
+senderemail = input("Please enter the sender's mail: ")
+mesg = input("Type your message: ")
+
+
+with smtplib.SMTP('mail.smtp2go.com',2525) as smtp:
+    smtp.ehlo()
+    smtp.login(smtp2go_username,smtp2gopassword)            # Change this. If you don't know what is this, follow readme.
+
+
+    msg=f'Subject:{subject}\n\n{mesg}'
+    print("[*]Sending Email....")
+    smtp.sendmail(senderemail,usermail,msg )
+    print("[+]HUEHUEHEUHEHEUHE mail sent")
+    sys.exit()
