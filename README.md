@@ -11,6 +11,14 @@ $ chmod +x dogemailer
 $ ./dogemailer
 
 ```
+To run this as a server:
+
+```
+Follow the first 3 steps, and after that do
+while true; do nc -lnvp 8080 -e "./dogemailer"; sleep 1; done
+**Note that in some cases the nc doesn't supports the execution of command, in such cases, ncat needs to be installed.
+```
+
 
 For mac and windows umsers:
 ```
